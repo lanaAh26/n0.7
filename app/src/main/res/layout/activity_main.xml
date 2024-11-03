@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical"
+    android:background="#E4B1F0">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:orientation="horizontal">
+
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-black"
+            android:text="Phone Book"
+            android:textSize="35sp" />
+
+        <TextView
+            android:id="@+id/tvDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="30.oct"
+            android:textSize="25sp"
+            android:layout_weight="3"
+            android:gravity="right"/>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <androidx.fragment.app.FragmentContainerView
+            android:id="@+id/f1"
+            android:name="com.example.n07.list"
+            android:layout_width="250dp"
+            android:layout_height="match_parent"
+            tools:context=".MainActivity"
+            android:background="#FFE1FF"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <androidx.fragment.app.FragmentContainerView
+                android:id="@+id/f2"
+                android:name="com.example.n07.details"
+                android:layout_width="370dp"
+                tools:context=".MainActivity"
+                android:layout_height="180dp"
+                android:layout_weight="1"
+                android:layout_marginLeft="50dp"
+                android:background="#FFE1FF" />
+
+            <androidx.fragment.app.FragmentContainerView
+                android:id="@+id/f3"
+                android:name="com.example.n07.add"
+                android:layout_width="320dp"
+                tools:context=".MainActivity"
+
+                android:layout_height="170dp"
+                android:layout_weight="1"
+                android:layout_marginLeft="75dp"
+                android:layout_marginTop="5dp"
+                android:background="#FFE1FF"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>
+
+
