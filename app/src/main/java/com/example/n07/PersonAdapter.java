@@ -34,7 +34,7 @@ public class PersonAdapter extends RecyclerView.Adapter<PersonAdapter.ViewHolder
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
-            tvName=itemView.findViewById(R.id.tName);
+            tvName=itemView.findViewById(R.id.tvName);
             imageView=itemView.findViewById(R.id.img);
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -48,7 +48,7 @@ public class PersonAdapter extends RecyclerView.Adapter<PersonAdapter.ViewHolder
 
     @NonNull
     @Override
-    public PersonAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+    public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view= LayoutInflater.from(parent.getContext()).inflate(R.layout.row,parent,false);
         return new ViewHolder(view);
 
